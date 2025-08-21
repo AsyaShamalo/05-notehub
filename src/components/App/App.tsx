@@ -11,7 +11,6 @@ import type { NoteResponse } from '../../services/noteService'
 import { fetchNotes } from '../../services/noteService'
 
 
-
 export default function App() {
 
   
@@ -47,6 +46,5 @@ export default function App() {
   </Modal>}
   {data?.notes && <NoteList notes={data?.notes}/>}
 </div>
-
   );
 }

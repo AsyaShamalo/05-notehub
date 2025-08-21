@@ -5,6 +5,7 @@ import type { CreateNoteParams } from '../../services/noteService';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { createNote } from '../../services/noteService';
 
+
 interface NoteFormProps {
     onClose: () => void;
 }
@@ -37,7 +38,8 @@ export default function NoteForm({onClose}: NoteFormProps) {
         title: '',
         content: '',
         tag: 'Todo',
-    }} validationSchema={NoteValidation} onSubmit={createNewNote}>
+        }} validationSchema={NoteValidation} onSubmit={createNewNote}>
+            
         <Form className={css.form}>
             <div className={css.formGroup}>
               <label htmlFor="title">Title</label>
@@ -84,5 +86,4 @@ export default function NoteForm({onClose}: NoteFormProps) {
         </Form>
     </Formik>
 )
-
 }
